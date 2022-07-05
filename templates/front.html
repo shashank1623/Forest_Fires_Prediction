@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest_Fire_Prediction</title>
+  <link rel="stylesheet" href="\static\css\front1.css">
+</head>
+<body>
+  
+  <div id="d1">
+    <p id="p1"><span class="auto-type"></span></p>
+    <p id="p2">Predicts the Probability of Forest Fire Occurence</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://wallpapercave.com/wp/wp9602055.jpg"
+    alt="Error loading in image" width="600" height="400">
+  </div>
+  <div id="d1">
+    <form action="/predict" method="POST" id="f1">
+      <div>
+        <label for="fn"><b>Temperature</b></label>
+            <br>
+        <input placeholder="Temperature in Celsius" name="temp" id="fn" class="c1" type="text" required>
+      </div>
+      <br>
+      <div>
+
+        <label for="O2"><b>Oxygen </b></label>
+          <br>
+        <input id="O2" class="c1" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" required>
+
+      </div>
+      <br>
+      <div>
+
+        <label for="hum"><b>Humidity </b></label>
+          <br>
+        <input id="hum" class="c1" name="hum" placeholder="Humidity%"  type="text" required>
+      </div>
+      <br>
+      <div id="b1">
+        <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+      <br>
+    </form>
+  </div>
+  <br>
+  <h4 align="center" ><b>{{pred}} </b></h4>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed=new Typed(".auto-type",{strings:["Forest Fire Prediction","Save Forest","Save Wildlife"],typeSpeed:250,backSpeed:150,loop:true})
+    </script>
+</body>
+</html>
